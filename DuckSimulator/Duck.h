@@ -17,7 +17,7 @@ public:
 	virtual void display() = 0;
 	void performFly() { flyBehavior->fly(); };
 
-	void setFlyBehavior(FlyBehavior & fb) { flyBehavior = &fb; }
-	void setQuackBehavior(QuackBehavior & qb) { quackBehavior = &qb; }
+	void setFlyBehavior(FlyBehavior * fb) { flyBehavior = fb; }
+	void setQuackBehavior(QuackBehavior * qb) { quackBehavior = qb; }
 };
 
