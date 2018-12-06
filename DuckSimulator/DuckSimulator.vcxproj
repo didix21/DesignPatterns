@@ -155,6 +155,7 @@
     <ClInclude Include="FlyNoWay.h" />
     <ClInclude Include="FlyWithWings.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Quack.h" />
     <ClInclude Include="QuackBehavior.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Quack.cpp" />
     <ClCompile Include="QuackBehavior.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
