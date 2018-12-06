@@ -6,8 +6,8 @@ class FlyNoWay :
 	public FlyBehavior
 {
 public:
-	FlyNoWay();
-	~FlyNoWay();
-	void fly() { std::cout << "Fly No Way" << std::endl; }
+	FlyNoWay() {};
+	~FlyNoWay() {};
+	void fly() override { std::cout << "Fly No Way" << std::endl; }
 };
 

@@ -8,6 +8,6 @@ class FlyRocketPowered :
 public:
 	FlyRocketPowered();
 	~FlyRocketPowered();
-	void fly() { std::cout << "I'm flying with a rocket!" << std::endl; }
+	void fly() override { std::cout << "I'm flying with a rocket!" << std::endl; }
 };
 

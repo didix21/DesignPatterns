@@ -8,6 +8,6 @@ class FlyWithWings :
 public:
 	FlyWithWings();
 	virtual ~FlyWithWings();
-	void fly() { std::cout << "Fly with wings" << std::endl; }
+	void fly() override { std::cout << "Fly with wings" << std::endl; }
 };
 

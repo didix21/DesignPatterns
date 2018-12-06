@@ -8,6 +8,6 @@ class Quack :
 public:
 	Quack();
 	~Quack();
-	void quack() { std::cout << "I'm Quacking!" << std::endl; }
+	void quack() override { std::cout << "I'm Quacking!" << std::endl; }
 };
 
