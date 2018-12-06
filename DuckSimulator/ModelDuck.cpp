@@ -4,6 +4,8 @@
 
 ModelDuck::ModelDuck()
 {
+	flyBehavior = new FlyNoWay();
+	quackBehavior = new MuteQuack();
 }
 
 
