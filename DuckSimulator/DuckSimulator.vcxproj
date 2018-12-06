@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Duck.h" />
     <ClInclude Include="FlyBehavior.h" />
     <ClInclude Include="FlyNoWay.h" />
     <ClInclude Include="FlyWithWings.h" />
@@ -160,9 +161,8 @@
     <ClInclude Include="Squeak.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Duck.cpp" />
     <ClCompile Include="DuckSimulator.cpp" />
-    <ClCompile Include="FlyBehavior.cpp" />
-    <ClCompile Include="FlyNoWay.cpp" />
     <ClCompile Include="FlyWithWings.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -171,7 +171,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Quack.cpp" />
-    <ClCompile Include="QuackBehavior.cpp" />
     <ClCompile Include="Squeak.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

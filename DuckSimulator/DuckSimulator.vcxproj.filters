@@ -36,6 +36,9 @@
     <ClInclude Include="Squeak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Duck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -44,22 +47,16 @@
     <ClCompile Include="DuckSimulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FlyBehavior.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="QuackBehavior.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FlyWithWings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FlyNoWay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Quack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Squeak.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Duck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
