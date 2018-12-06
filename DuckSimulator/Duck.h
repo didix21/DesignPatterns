@@ -12,9 +12,9 @@ protected:
 public:
 	Duck();
 	virtual ~Duck();
-	void performQuack() { flyBehavior->fly(); }
+	void performQuack() { quackBehavior->quack(); }
 	void swim() { std::cout << "swimming" << std::endl; }
 	virtual void display() = 0;
-	void performFly() { quackBehavior->quack(); };
+	void performFly() { flyBehavior->fly(); };
 };
 

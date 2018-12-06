@@ -155,6 +155,7 @@
     <ClInclude Include="FlyBehavior.h" />
     <ClInclude Include="FlyNoWay.h" />
     <ClInclude Include="FlyWithWings.h" />
+    <ClInclude Include="MallarDuck.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Quack.h" />
     <ClInclude Include="QuackBehavior.h" />
@@ -164,6 +165,7 @@
     <ClCompile Include="Duck.cpp" />
     <ClCompile Include="DuckSimulator.cpp" />
     <ClCompile Include="FlyWithWings.cpp" />
+    <ClCompile Include="MallarDuck.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
