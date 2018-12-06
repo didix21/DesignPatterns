@@ -152,12 +152,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="FlyBehavior.h" />
+    <ClInclude Include="FlyWithWings.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="QuackBehavior.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DuckSimulator.cpp" />
     <ClCompile Include="FlyBehavior.cpp" />
+    <ClCompile Include="FlyWithWings.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
