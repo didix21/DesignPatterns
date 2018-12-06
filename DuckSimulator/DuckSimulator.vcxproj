@@ -157,6 +157,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Quack.h" />
     <ClInclude Include="QuackBehavior.h" />
+    <ClInclude Include="Squeak.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DuckSimulator.cpp" />
@@ -171,6 +172,7 @@
     </ClCompile>
     <ClCompile Include="Quack.cpp" />
     <ClCompile Include="QuackBehavior.cpp" />
+    <ClCompile Include="Squeak.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
