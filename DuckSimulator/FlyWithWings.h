@@ -3,7 +3,7 @@
 #include <iostream>
 
 class FlyWithWings :
-	protected FlyBehavior
+	public FlyBehavior
 {
 public:
 	FlyWithWings();
