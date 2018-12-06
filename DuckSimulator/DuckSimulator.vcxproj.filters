@@ -42,6 +42,12 @@
     <ClInclude Include="MallarDuck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ModelDuck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlyRocketPowered.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -63,6 +69,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MallarDuck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelDuck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlyRocketPowered.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
