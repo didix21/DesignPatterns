@@ -5,7 +5,7 @@
 
 class Duck
 {
-private:
+protected:
 	FlyBehavior* flyBehavior;
 	QuackBehavior* quackBehavior;
 	
