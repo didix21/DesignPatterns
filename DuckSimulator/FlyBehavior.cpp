@@ -1,12 +1,6 @@
 #include "pch.h"
 #include "FlyBehavior.h"
 
-
-FlyBehavior::FlyBehavior()
-{
-}
-
-
 FlyBehavior::~FlyBehavior()
 {
 }
