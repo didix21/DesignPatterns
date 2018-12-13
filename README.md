@@ -4,4 +4,4 @@
 
 DuckSimulator implemented in c++ of Head First Pattern Design Book.
 
-![DuckSimulator](DuckSimulator.png)
+![DuckSimulator](DuckSImulator.png)
