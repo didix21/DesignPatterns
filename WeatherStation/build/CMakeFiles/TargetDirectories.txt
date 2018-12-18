@@ -1,0 +1,5 @@
+/home/didix21/repos/DesignPatterns/WeatherStation/build/CMakeFiles/rebuild_cache.dir
+/home/didix21/repos/DesignPatterns/WeatherStation/build/CMakeFiles/edit_cache.dir
+/home/didix21/repos/DesignPatterns/WeatherStation/build/WeatherStation/CMakeFiles/rebuild_cache.dir
+/home/didix21/repos/DesignPatterns/WeatherStation/build/WeatherStation/CMakeFiles/WeatherStation.dir
+/home/didix21/repos/DesignPatterns/WeatherStation/build/WeatherStation/CMakeFiles/edit_cache.dir

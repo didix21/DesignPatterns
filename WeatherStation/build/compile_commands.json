@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/didix21/repos/DesignPatterns/WeatherStation/build/WeatherStation",
+  "command": "/usr/bin/c++   -I/home/didix21/repos/DesignPatterns/WeatherStation/WeatherStation/include  -g   -o CMakeFiles/WeatherStation.dir/src/WeatherData.cpp.o -c /home/didix21/repos/DesignPatterns/WeatherStation/WeatherStation/src/WeatherData.cpp",
+  "file": "/home/didix21/repos/DesignPatterns/WeatherStation/WeatherStation/src/WeatherData.cpp"
+},
+{
+  "directory": "/home/didix21/repos/DesignPatterns/WeatherStation/build/WeatherStation",
+  "command": "/usr/bin/c++   -I/home/didix21/repos/DesignPatterns/WeatherStation/WeatherStation/include  -g   -o CMakeFiles/WeatherStation.dir/src/main.cpp.o -c /home/didix21/repos/DesignPatterns/WeatherStation/WeatherStation/src/main.cpp",
+  "file": "/home/didix21/repos/DesignPatterns/WeatherStation/WeatherStation/src/main.cpp"
+}
+]

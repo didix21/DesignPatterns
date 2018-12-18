@@ -4,23 +4,11 @@
         {
             "label": "Build C++ project",
             "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
+            "options": {
+                "cwd": "${workspaceRoot}/build"
             },
-            "command": "make",
-        },
-        {
-            "label": "Build & run C++ project",
-            "type": "shell",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "command": "make",
-            "args": [
-                "run"
-            ]
+            "command": "Cmake",
+            "args": ["-G 'Makefiles' -DCMAKE_BUILD_TYPE=Debug .."]
         }
     ]
 }
