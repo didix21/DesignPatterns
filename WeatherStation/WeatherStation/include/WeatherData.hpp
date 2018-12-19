@@ -9,7 +9,7 @@
 class WeatherData : public Subject
 {
 private:
-  std::vector<std::unique_ptr<Observer>> observers;
+  std::vector<Observer*> observers;
   float temperature;
   float humidity;
   float pressure;
@@ -18,17 +18,18 @@ public:
   WeatherData();
   ~WeatherData();
 
-  void registerObserver(Observer* observer);
-  void removeObserver(Observer* observer);
-  void notifyObservers();
+  void registerObserver(Observer* observer) override;
+  void removeObserver(Observer* observer) override;
 
-  float getTemperature();
-  float getHumidty();
-  float getPressure();
+  void setMeasurements(float temperature, float humidity, float pressure);
+
   void measurementsChanged();
 
-private:
+  void notifyObservers() override;
 
-  std::forward_iterator_tag indexOf(Observer* observer); 
+  
+
+private:
+  std::vector<Observer*>::iterator indexOf(Observer* observer); 
 
 };

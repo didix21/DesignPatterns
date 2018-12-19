@@ -1,30 +1,44 @@
 #include "WeatherData.hpp"
 
-WeatherData::WeatherData() {
-
-}
-
-WeatherData::~WeatherData() {
-
-}
-
-void WeatherData::registerObserver(Observer* observer)
+WeatherData::WeatherData()
 {
-    //observers.push_back(std::make_unique<Observer>(observer));
 }
 
-void WeatherData::removeObserver(Observer* observer)
+WeatherData::~WeatherData()
 {
-    //observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
+}
+
+void WeatherData::registerObserver(Observer *observer)
+{
+    observers.push_back(observer);
+}
+
+void WeatherData::removeObserver(Observer *observer)
+{
+    observers.erase(indexOf(observer), observers.end());
+}
+
+void WeatherData::setMeasurements(float temperature, float humidity, float pressure)
+{
+    this->temperature = temperature;
+    this->humidity = humidity;
+    this->pressure = pressure;
+
+    measurementsChanged();
+}
+
+void WeatherData::measurementsChanged()
+{
+    notifyObservers();
 }
 
 void WeatherData::notifyObservers()
 {
-
+    for (auto observer : observers)
+        observer->update(temperature, humidity, pressure);
 }
 
-std::forward_iterator_tag WeatherData::indexOf(Observer* observer)
+std::vector<Observer *>::iterator WeatherData::indexOf(Observer *observer)
 {
-    //return std::remove(observers.begin(), observers.end(), std::make_unique<Observer>(observer));
-    return std::forward_iterator_tag();
+    return std::find(observers.begin(), observers.end(), observer);
 }
