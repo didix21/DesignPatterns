@@ -2,18 +2,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C++ Debug (gdb)",
+            "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/main",
-            "preLaunchTask": "Build C++ project",
+            // Resolved by CMake Tools:
+            "program": "${command:cmake.launchTargetPath}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "$PATH:$HOME/some_path"
+                },
+                {
+                    "name": "OTHER_VALUE",
+                    "value": "Something something"
+                }
+            ],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

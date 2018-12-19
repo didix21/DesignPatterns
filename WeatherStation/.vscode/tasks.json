@@ -1,14 +1,32 @@
 {
-    "version": "2.0.0",
+    "version": "2.0.0", 
     "tasks": [
         {
-            "label": "Build C++ project",
+            "label": "Build cmake files",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceRoot}/build"
             },
-            "command": "Cmake",
-            "args": ["-G 'Makefiles' -DCMAKE_BUILD_TYPE=Debug .."]
+            "command": "cmake",
+            "args": [
+                "-G", "Unix Makefiles"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Build c++ files",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "make",
+            "args": [
+                "-j 8"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
