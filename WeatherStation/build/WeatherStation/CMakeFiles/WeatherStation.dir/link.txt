@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/WeatherStation.dir/src/WeatherData.cpp.o CMakeFiles/WeatherStation.dir/src/main.cpp.o  -o WeatherStation 
