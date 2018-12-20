@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-class CurrentConditionDisplay : public Observer, public DisplayElement
+class CurrentConditionDisplay : Observer, DisplayElement
 {
 private:
     float temperature;
