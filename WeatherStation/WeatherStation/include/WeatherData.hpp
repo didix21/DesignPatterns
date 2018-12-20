@@ -5,11 +5,10 @@
 #include <algorithm>
 #include "Subject.hpp"
 
-
 class WeatherData : public Subject
 {
 private:
-  std::vector<Observer*> observers;
+  std::vector<Observer *> observers;
   float temperature;
   float humidity;
   float pressure;
@@ -18,8 +17,8 @@ public:
   WeatherData();
   ~WeatherData();
 
-  void registerObserver(Observer* observer) override;
-  void removeObserver(Observer* observer) override;
+  void registerObserver(Observer *observer) override;
+  void removeObserver(Observer *observer) override;
 
   void setMeasurements(float temperature, float humidity, float pressure);
 
@@ -27,9 +26,6 @@ public:
 
   void notifyObservers() override;
 
-  
-
 private:
-  std::vector<Observer*>::iterator indexOf(Observer* observer); 
-
+  std::vector<Observer *>::iterator indexOf(Observer *observer);
 };
