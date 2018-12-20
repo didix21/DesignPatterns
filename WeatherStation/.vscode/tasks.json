@@ -19,12 +19,36 @@
             "options": {
                 "cwd": "${workspaceRoot}/build"
             },
-            "command": "make",
-            "args": [
-                "-j 8"
-            ],
+            "linux": {
+                "command": "make",
+                "args": [
+                    "-j", "8"
+                ],
+            },
             "group": {
                 "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build/WeatherStation"
+            },
+            "linux": {
+                "command": "./WeatherStation"
+            },
+            "group": {
+                "kind": "test",
                 "isDefault": true
             }
         }
