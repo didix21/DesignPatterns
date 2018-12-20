@@ -14,9 +14,7 @@ private:
     Subject* weatherData;
 
 public:
-    
-
-    CurrentConditionDisplay(Subject* oservable);
+    CurrentConditionDisplay(Subject* weatherData);
     ~CurrentConditionDisplay();
     
     void update(float temperature, float humidity, float pressure) override;
