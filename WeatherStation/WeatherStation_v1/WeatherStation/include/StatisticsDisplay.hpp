@@ -5,7 +5,7 @@
 #include "DisplayElement.hpp"
 #include <iostream>
 
-class StatisticDisplay : Observer, DisplayElement
+class StatisticDisplay : public Observer, public DisplayElement
 {
 private:
     Subject *weatherData;

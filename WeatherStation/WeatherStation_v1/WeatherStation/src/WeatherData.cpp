@@ -15,7 +15,10 @@ void WeatherData::registerObserver(Observer *observer)
 
 void WeatherData::removeObserver(Observer *observer)
 {
-    observers.erase(indexOf(observer), observers.end());
+    auto index = indexOf(observer);
+    
+    if(index != observers.end())
+        observers.erase(index);
 }
 
 void WeatherData::setMeasurements(float temperature, float humidity, float pressure)

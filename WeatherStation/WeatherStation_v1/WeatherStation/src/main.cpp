@@ -13,4 +13,9 @@ int main() {
     
     weatherData.setMeasurements(19.0, 10.0, 1.0);
     weatherData.setMeasurements(18.0, 11.0, 2.0);
+
+    weatherData.removeObserver(&statisticDisplay);
+    weatherData.removeObserver(&forecastDisplay);
+
+    weatherData.setMeasurements(25.0, 25.0, 1024.0);
 }
