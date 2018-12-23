@@ -1,19 +1,22 @@
 #include "ForecastDisplay.hpp"
 
-ForecastDisplay::ForecastDisplay(Subject *weatherData)
+ForecastDisplay::ForecastDisplay(Observable *observable)
 {
-    this->weatherData = weatherData;
+    this->observable = observable;
 
-    this->weatherData->registerObserver(this);
+    this->observable->addObserver(this);
 }
 
-void ForecastDisplay::update(float temperature, float humidity, float pressure)
+void ForecastDisplay::update(Observable *observable)
 {
-    this->temperature = temperature;
-    this->humidity = humidity;
-    this->pressure = pressure;
-
-    display();
+    if(WeatherData* weatherData = static_cast<WeatherData *>(observable)) 
+    {
+        this->temperature = weatherData->getTemperature();
+        this->humidity = weatherData->getHumidity();
+        this->pressure = weatherData->getPressure();
+        
+        display();
+    }
 }
 
 void ForecastDisplay::display()

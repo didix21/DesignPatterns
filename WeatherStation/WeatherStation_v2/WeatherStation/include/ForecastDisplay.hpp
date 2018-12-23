@@ -1,23 +1,24 @@
 #pragma once
 
-#include "Subject.hpp"
+#include "Observable.hpp"
 #include "Observer.hpp"
+#include "WeatherData.hpp"
 #include "DisplayElement.hpp"
 #include <iostream>
 
 class ForecastDisplay : Observer, DisplayElement
 {
   private:
-    Subject *weatherData;
+    Observable *observable;
     float temperature;
     float humidity;
     float pressure;
 
   public:
-    ForecastDisplay(Subject *weatherData);
+    ForecastDisplay(Observable *observable);
     ~ForecastDisplay(){};
 
-    void update(float temperature, float humidity, float pressure) override;
+    void update(Observable *observable) override;
 
     void display() override;
 };

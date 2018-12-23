@@ -1,10 +1,10 @@
 #include "StatisticsDisplay.hpp"
 
-StatisticDisplay::StatisticDisplay(Subject *weatherData)
+StatisticDisplay::StatisticDisplay(Observable *observable)
 {
-    this->weatherData = weatherData;
+    this->observable = observable;
     
-    this->weatherData->registerObserver(this);
+    this->observable->addObserver(this);
 }
 
 StatisticDisplay::~StatisticDisplay()
@@ -12,15 +12,18 @@ StatisticDisplay::~StatisticDisplay()
     
 }
 
-void StatisticDisplay::update(float temperature, float humidity, float pressure)
+void StatisticDisplay::update(Observable *observable)
 {
-    this->temperature = temperature;
-    this->humidity = humidity;
-    this->pressure = pressure;
+    if(WeatherData *weatherData = static_cast<WeatherData *>(observable))
+    {
+        this->temperature = weatherData->getTemperature();
+        this->humidity = weatherData->getHumidity();
+        this->pressure = weatherData->getPressure();
 
-    updateData();
-    
-    display();
+        updateData();
+        
+        display();
+    }
 }
 
 void StatisticDisplay::display()

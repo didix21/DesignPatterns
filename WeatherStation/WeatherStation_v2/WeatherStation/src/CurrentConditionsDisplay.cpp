@@ -1,10 +1,9 @@
 #include "CurrentConditionsDisplay.hpp"
 
-CurrentConditionDisplay::CurrentConditionDisplay(Subject* weatherData)
+CurrentConditionDisplay::CurrentConditionDisplay(Observable* observable)
 {
-    this->weatherData = weatherData;
-    
-    this->weatherData->registerObserver(this);
+    this->observable = observable;
+    this->observable->addObserver(this);
 }
 
 CurrentConditionDisplay::~CurrentConditionDisplay()
@@ -12,11 +11,14 @@ CurrentConditionDisplay::~CurrentConditionDisplay()
 
 }
 
-void CurrentConditionDisplay::update(float temperature, float humidity, float pressure)
+void CurrentConditionDisplay::update(Observable *observable)
 {
-    this->temperature = temperature;
-    this->humidity = humidity;
-    display();
+    if(WeatherData *weatherData = static_cast<WeatherData *>(observable))
+    {
+        this->temperature = weatherData->getTemperature();
+        this->humidity = weatherData->getHumidity();
+        display();
+    }
 }
 
 void CurrentConditionDisplay::display()
