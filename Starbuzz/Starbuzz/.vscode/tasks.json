@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0", 
+    "tasks": [
+        {
+            "label": "Build cmake files",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "cmake",
+            "args": [
+                "-G", "Unix Makefiles"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Build c++ files",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "linux": {
+                "command": "make",
+                "args": [
+                    "-j", "8"
+                ],
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build/Starbuzz"
+            },
+            "linux": {
+                "command": "./Starbuzz"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}
