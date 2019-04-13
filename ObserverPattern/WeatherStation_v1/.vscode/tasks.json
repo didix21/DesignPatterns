@@ -5,12 +5,12 @@
             "label": "Build cmake files",
             "type": "shell",
             "options": {
-                "cwd": "${workspaceRoot}/build"
+                "cwd": "${workspaceRoot}"
             },
             "command": "cmake",
             "args": [
-                "-G", "Unix Makefiles"
-            ],
+                "-B", "build"
+            ],            
             "problemMatcher": []
         },
         {
@@ -19,12 +19,10 @@
             "options": {
                 "cwd": "${workspaceRoot}/build"
             },
-            "linux": {
-                "command": "make",
-                "args": [
-                    "-j", "8"
-                ],
-            },
+            "command": "make",
+            "args": [
+                "-j", "8"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -44,9 +42,7 @@
             "options": {
                 "cwd": "${workspaceRoot}/build/WeatherStation"
             },
-            "linux": {
-                "command": "./WeatherStation"
-            },
+            "command": "./WeatherStation",
             "group": {
                 "kind": "test",
                 "isDefault": true
