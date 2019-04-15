@@ -9,8 +9,7 @@
             },
             "command": "cmake",
             "args": [
-                "-B",
-                "build"
+                "-B", "build"
             ],
             "problemMatcher": []
         },
@@ -23,9 +22,8 @@
             "linux": {
                 "command": "make",
                 "args": [
-                    "-j",
-                    "8"
-                ]
+                    "-j", "8"
+                ],
             },
             "group": {
                 "kind": "build",
@@ -38,8 +36,7 @@
                 "panel": "shared",
                 "showReuseMessage": true,
                 "clear": false
-            },
-            "problemMatcher": []
+            }
         },
         {
             "label": "Run",
@@ -47,7 +44,9 @@
             "options": {
                 "cwd": "${workspaceRoot}/build/RemoteControl"
             },
-            "command": "./FactoryPizza",
+
+            "command": "./RemoteControl",
+
             "group": {
                 "kind": "test",
                 "isDefault": true
