@@ -2,12 +2,16 @@
 
 Light::Light() {}
 
+Light::Light(std::string lightRoom) {
+   this->lightRoom = lightRoom;
+}
+
 Light::~Light() {}
 
 void Light::on() {
-    std::cout << "Light ON" << std::endl;
+    std::cout << lightRoom << " ON" << std::endl;
 }
 
 void Light::off() {
-    std::cout << "Light OFF" << std::endl;
+    std::cout << lightRoom << " OFF" << std::endl;
 }

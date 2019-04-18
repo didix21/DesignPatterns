@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Command.hpp"
 #include "Light.hpp"
 
@@ -11,6 +13,7 @@ public:
     ~LightOnCommand();
     
     void execute() override; 
+    std::string type() override;
 
 };
 
@@ -22,5 +25,5 @@ public:
     ~LightOffCommand();
 
     void execute() override;
-
+    std::string type() override;
 };
